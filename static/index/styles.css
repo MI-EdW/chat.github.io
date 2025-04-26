@@ -1,0 +1,104 @@
+.message-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 99.5%;
+    height: 92%;
+    word-break: break-all;
+    background-color: rgb(80,80,80);
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.message-container::-webkit-scrollbar, .message-input::-webkit-scrollbar {
+    width: 4px;
+}
+
+.message-container::-webkit-scrollbar-track, .message-input::-webkit-scrollbar-track {
+    background: rgb(70, 70, 70);
+    border-radius: 10px;
+}
+
+.message-container::-webkit-scrollbar-thumb, .message-input::-webkit-scrollbar-thumb {
+    background: rgb(120, 120, 120);
+    border-radius: 10px;
+}
+
+.message-container::-webkit-scrollbar-thumb:hover, .message-input::-webkit-scrollbar-thumb:hover {
+    background: rgb(170, 170, 170);
+}
+
+
+.channels-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 15%;
+    height: 97%;
+    word-break: break-all;
+    background-color: rgb(80,80,80);
+    border-radius: 5px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: rgb(60,60,60);
+}
+
+.message h5, .message p {
+    margin: 0;
+    padding: 0;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+    color: rgb(235,235,235);
+    border-radius: 5px;
+    margin: 3px 5px;
+    height: fit-content;
+}
+
+.message p {
+    padding-left: 4%;
+}
+
+.channels-text {
+    align-self: center;
+    text-align: center;
+}
+
+.message:hover {
+    background-color: rgb(70,70,70);
+}
+
+.message-input {
+    width: 95%;
+    height: 30px;
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 5px;
+    background-color: rgb(60, 60, 60);
+    color: rgb(235, 235, 235);
+    position: absolute;
+    left: 1.5%;
+    bottom: 1%;
+    resize: none;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.chat-container {
+    position: relative;
+    background-color: rgb(80,80,80);
+    border-radius: 15px;
+    height: 97%;
+    width: 100%;
+    top: 0.5%;
+}

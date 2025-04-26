@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Выбор логина</title>
+</head>
+<body>
+    <h2>Введите логин:</h2>
+    <input id="loginInput" type="text">
+    <button onclick="submitLogin()">Продолжить</button>
+    <p id="error" style="color: red;"></p>
+
+    <script>
+        // Если логин уже есть — сразу на главную
+        if (document.cookie.includes('username=')) {
+            window.location.href = "/";
+        }
+
+        function submitLogin() {
+            const login = document.getElementById('loginInput').value.trim();
+            fetch('/submit_login', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ login: login })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    window.location.href = "/";
+                } else {
+                    document.getElementById('error').textContent = 'Этот логин уже занят!';
+                }
+            });
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Выбор логина</title>
+</head>
+<body>
+    <h2>Введите логин:</h2>
+    <form method="POST" action="/create_login">
+        <input id="loginInput" name="username" type="text">
+        <button type="submit">Продолжить</button>
+    </form>
+    <p id="error" style="color: red;"></p>
+</body>
+</html>
